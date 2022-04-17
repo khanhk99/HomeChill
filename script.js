@@ -15,7 +15,9 @@ function loadClient() {
 }
 // Make sure the client is loaded and sign-in is complete before calling this method.
 function execute() {
-    return gapi.client.sheets.spreadsheets.get({})
+    return gapi.client.sheets.spreadsheets.get({
+        "spreadsheetId": "1ycyQ4VNqyqFXhkLhLxjQLN7zC4WD2igR"
+    })
         .then(function (response) {
             // Handle the results here (response.result has the parsed body).
             console.log("Response", response);
