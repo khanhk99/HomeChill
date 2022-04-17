@@ -23,7 +23,7 @@ function execute() {
             function (err) { console.error("Execute error", err); });
 }
 gapi.load("client:auth2", function () {
-    gapi.auth2.init({ client_id: "YOUR_CLIENT_ID" });
+    gapi.auth2.init({ client_id: "116028291081-1cst4ra0eoqn0joevsvm17ik0obc9g0g.apps.googleusercontent.com" });
 });
 
 // Get data via API
