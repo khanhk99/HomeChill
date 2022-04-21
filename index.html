@@ -5,19 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hometech</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 
 <body>
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-
-    <div id="view" style="height: 400px; min-width: 310px"></div>
-
-    <button onclick="authenticate().then(loadClient)">authorize and load</button>
-    <button onclick="execute()">execute</button>
+    <div class="container">
+        <button onclick="handleSignInClick()" class="btn btn-secondary mb-2">Xác thực</button>
+        <div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button onclick="executeView()" class="btn btn-primary">Lượt xem</button>
+                <button onclick="executeTraffic()" type="button" class="btn btn-primary">Lượt truy cập</button>
+                <button onclick="executeCart()" type="button" class="btn btn-primary">Thêm giỏ hàng</button>
+                <button onclick="executeCost()" type="button" class="btn btn-primary">Chi phí</button>
+                <button onclick="executeOrder()" type="button" class="btn btn-primary">Số đơn</button>
+                <button onclick="executeSales()" type="button" class="btn btn-primary">Doanh thu</button>
+            </div>
+        </div>
+        <div id="view" style="height: 400px; width: 100%"></div>
+        <div id="traffic" style="height: 400px; min-width: 310px"></div>
+        <div id="cart" style="height: 400px; min-width: 310px"></div>
+        <div id="cost" style="height: 400px; min-width: 310px"></div>
+        <div id="order" style="height: 400px; min-width: 310px"></div>
+        <div id="sales" style="height: 400px; min-width: 310px"></div>
+    </div>
 </body>
-<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 
 </html>
