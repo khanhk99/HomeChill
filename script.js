@@ -3,6 +3,7 @@ const rowStart = 14;
 const rowEnd = 230;
 const MONTH = 4;
 const endMonth = 30;
+const SPREADSHEETID = '1aoiQCQMACYETvWPS9oSJWlM7G-YmZd3XpCyGGfJI0rk';
 const nameShopArr = [
     {
         name: 'Yume shopee',
@@ -71,7 +72,7 @@ const typeIndex = {
 
 const paramsView = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1DDsu1UGX5bN9PHKLYZBRCmjrsttInkGeWDCG8iW3MCM',
+    spreadsheetId: SPREADSHEETID,
 
     // The A1 notation of the values to retrieve.
     range: "SÀN TMĐT!" + typeIndex.view.column + rowStart + ':' + typeIndex.view.column + rowEnd,
@@ -80,7 +81,7 @@ const paramsView = {
 };
 const paramsTraffic = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1DDsu1UGX5bN9PHKLYZBRCmjrsttInkGeWDCG8iW3MCM',
+    spreadsheetId: SPREADSHEETID,
 
     // The A1 notation of the values to retrieve.
     range: "SÀN TMĐT!" + typeIndex.traffic.column + rowStart + ':' + typeIndex.traffic.column + rowEnd,
@@ -89,7 +90,7 @@ const paramsTraffic = {
 };
 const paramsCart = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1DDsu1UGX5bN9PHKLYZBRCmjrsttInkGeWDCG8iW3MCM',
+    spreadsheetId: SPREADSHEETID,
 
     // The A1 notation of the values to retrieve.
     range: "SÀN TMĐT!" + typeIndex.cart.column + rowStart + ':' + typeIndex.cart.column + rowEnd,
@@ -98,7 +99,7 @@ const paramsCart = {
 };
 const paramsCost = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1DDsu1UGX5bN9PHKLYZBRCmjrsttInkGeWDCG8iW3MCM',
+    spreadsheetId: SPREADSHEETID,
 
     // The A1 notation of the values to retrieve.
     range: "SÀN TMĐT!" + typeIndex.cost.column + rowStart + ':' + typeIndex.cost.column + rowEnd,
@@ -107,7 +108,7 @@ const paramsCost = {
 };
 const paramsOrder = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1DDsu1UGX5bN9PHKLYZBRCmjrsttInkGeWDCG8iW3MCM',
+    spreadsheetId: SPREADSHEETID,
 
     // The A1 notation of the values to retrieve.
     range: "SÀN TMĐT!" + typeIndex.order.column + rowStart + ':' + typeIndex.order.column + rowEnd,
@@ -116,7 +117,7 @@ const paramsOrder = {
 };
 const paramsSales = {
     // The ID of the spreadsheet to retrieve data from.
-    spreadsheetId: '1DDsu1UGX5bN9PHKLYZBRCmjrsttInkGeWDCG8iW3MCM',
+    spreadsheetId: SPREADSHEETID,
 
     // The A1 notation of the values to retrieve.
     range: "SÀN TMĐT!" + typeIndex.sales.column + rowStart + ':' + typeIndex.sales.column + rowEnd,
@@ -270,14 +271,5 @@ function drawChart(id, title, titleY, datas) {
         },
 
         series: datas
-        // series: [
-        //     {
-        //         name: 'Product 2',
-        //         data: [
-        //             { x: Date.UTC(2022, 00, 01), y: 93.2 },
-        //             { x: Date.UTC(2022, 01, 04), y: 86.1 },
-        //         ]
-        //     }
-        // ]
     });
 }
